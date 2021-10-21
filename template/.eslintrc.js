@@ -3,7 +3,7 @@ const fs = require('fs');
 const folders = fs
   .readdirSync('src', {withFileTypes: true})
   .filter(dirent => dirent.isDirectory())
-  .map(dirent => '@' + dirent.name);
+  .map(dirent => dirent.name);
 
 module.exports = {
   root: true,
