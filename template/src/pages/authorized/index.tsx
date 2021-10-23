@@ -1,10 +1,10 @@
+export * as authorizedStackConfig from './config';
+
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {ParamList, routeNames} from './config';
 import {HelloWorldScreen} from './hello-world';
-
-export * as authorizedStackConfig from './config';
 
 const Stack = createStackNavigator<ParamList>();
 

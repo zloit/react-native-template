@@ -3,7 +3,7 @@ export * as HelloWorldScreenConfig from './config';
 import React from 'react';
 import {Button, Text, View} from 'react-native';
 
-import {unauthorizedStackConfig} from 'pages/unauthorized';
+import {routerConfig} from 'pages';
 import {ScreenProps} from '../config';
 import {routeName} from './config';
 import {styles} from './style';
@@ -19,8 +19,8 @@ export const HelloWorldScreen: React.FC<HelloWorldScreenProps> = ({
       <Button
         title={'unauthorize'}
         onPress={() =>
-          navigation.navigate(unauthorizedStackConfig.name, {
-            screen: unauthorizedStackConfig.routeNames.authError,
+          navigation.navigate(routerConfig.routeMap.authorized.stackName, {
+            screen: routerConfig.routeMap.authorized.helloWorld,
           })
         }
       />

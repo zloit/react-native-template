@@ -20,3 +20,14 @@ export type ScreenProps<P extends RouteNames> = {
   navigation: StackNavigationProp<ParamList, P>;
   route: RouteProp<ParamList, P>;
 };
+
+export const routeMap = {
+  authorized: {
+    stackName: authorizedStackConfig.name,
+    ...authorizedStackConfig.routeNames,
+  },
+  unauthorized: {
+    stackName: authorizedStackConfig.name,
+    ...authorizedStackConfig.routeNames,
+  },
+} as const;
