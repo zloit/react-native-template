@@ -27,7 +27,7 @@ export const routeMap = {
     ...authorizedStackConfig.routeNames,
   },
   unauthorized: {
-    stackName: authorizedStackConfig.name,
-    ...authorizedStackConfig.routeNames,
+    stackName: unauthorizedStackConfig.name,
+    ...unauthorizedStackConfig.routeNames,
   },
 } as const;

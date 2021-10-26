@@ -18,11 +18,11 @@ export const HelloWorldScreen: React.FC<HelloWorldScreenProps> = ({
       <Text>Hello World!</Text>
       <Button
         title={'unauthorize'}
-        onPress={() =>
-          navigation.navigate(routerConfig.routeMap.authorized.stackName, {
-            screen: routerConfig.routeMap.authorized.helloWorld,
-          })
-        }
+        onPress={() => {
+          navigation.navigate(routerConfig.routeMap.unauthorized.stackName, {
+            screen: routerConfig.routeMap.unauthorized.authError,
+          });
+        }}
       />
     </View>
   );
