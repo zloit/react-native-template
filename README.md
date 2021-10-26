@@ -11,22 +11,28 @@
 
 - pre-commit-hooks by [husky v6](https://typicode.github.io/husky/)
 - [react-native-svg-transformer](https://github.com/kristerkari/react-native-svg-transformer)
+- autofixable import sorting with [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort)
+- [compose-function](https://www.npmjs.com/package/compose-function) for providers composing
+- [eslint-plugin-boundaries](https://github.com/javierbrea/eslint-plugin-boundaries) for [layer order](https://feature-sliced.design/en/docs/concepts/app-splitting/#layer-order) and [public API](https://feature-sliced.design/en/docs/concepts/public-api)
+- [react-navigation v6](https://reactnavigation.org/docs/hello-react-navigation/) with typed initital structure
 - Path aliases for [feature-sliced](https://feature-sliced.design/) architecture:
 
-| Alias     | Path            |
-| --------- |:---------------:|
-| @app      | ./src/app/      |
-| @processes| ./src/processes/|
-| @pages    | ./src/pages/    |
-| @features | ./src/features/ |
-| @entities | ./src/entities/ |
-| @shared   | ./src/shared/   |
-
-## :arrow_forward: Usage
+## ▶️ Usage
 
 ```sh
 npx react-native init MyApp --template zloit/react-native-template
 ```
+
+## 📘 Aliases
+
+| Alias     | Path            |
+| --------- |:---------------:|
+| app      | ./src/app/      |
+| processes| ./src/processes/|
+| pages    | ./src/pages/    |
+| features | ./src/features/ |
+| entities | ./src/entities/ |
+| shared   | ./src/shared/   |
 
 ## :warning: React Native CLI
 
