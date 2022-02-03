@@ -19,18 +19,33 @@ module.exports = {
         rules: [
           {
             from: 'shared',
-            disallow: ['entities', 'features', 'pages', 'processes', 'app'],
+            disallow: [
+              'entities',
+              'features',
+              'widgets',
+              'pages',
+              'processes',
+              'app',
+            ],
           },
           {
             from: 'entities',
-            disallow: ['features', 'pages', 'processes', 'app'],
+            disallow: ['features', 'widgets', 'pages', 'processes', 'app'],
           },
           {
             from: 'features',
-            disallow: ['pages', 'app'],
+            disallow: ['widgets', 'pages', 'processes', 'app'],
+          },
+          {
+            from: 'widgets',
+            disallow: ['pages', 'processes', 'app'],
           },
           {
             from: 'pages',
+            disallow: ['processes', 'app'],
+          },
+          {
+            from: 'processes',
             disallow: ['app'],
           },
         ],
@@ -51,9 +66,10 @@ module.exports = {
               'pages',
               'processes',
               'app',
+              'widgets',
             ],
             // only allow index.js
-            allow: 'index.{ts,tsx}',
+            allow: '**/index.{ts,tsx}',
           },
         ],
       },
@@ -102,6 +118,12 @@ module.exports = {
         mode: 'folder',
         capture: ['slice', 'segment'],
       },
+      {
+        type: 'widgets',
+        pattern: 'widgets',
+        mode: 'folder',
+        capture: ['slice', 'segment'],
+      },
     ],
     'boundaries/ignore': ['.eslintrc.js'],
   },
@@ -115,7 +137,7 @@ module.exports = {
             groups: [
               ['^\\u0000'],
               ['^react', '^@?\\w'],
-              [`^(${folders.join('|')})(/.*|$)`, '^\\.'],
+              [`^@(${folders.join('|')})`],
               ['^'],
               ['^\\.'],
             ],
